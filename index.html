@@ -7,7 +7,7 @@
     <title>Sebastian Estrera</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -26,8 +26,8 @@
             --accent-hover: #ffffff;
             --accent-contrast: #0a0a0a;
             --shadow: none;
-            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+            --font: 'Geist Mono', ui-monospace, 'SF Mono', 'Fira Code', monospace;
+            --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', 'Fira Code', monospace;
         }
 
         [data-theme="light"] {
@@ -643,6 +643,99 @@
             border-color: var(--border-strong);
         }
 
+        /* ─── CERTIFICATES ─── */
+
+        .certs-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cert-group {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            padding: 24px;
+        }
+
+        .cert-group-header {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cert-group-header svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        .cert-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            transition: padding-left 150ms ease;
+        }
+
+        .cert-item:first-child {
+            padding-top: 0;
+        }
+
+        .cert-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .cert-item:hover {
+            padding-left: 6px;
+        }
+
+        .cert-item-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .cert-item-name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .cert-item-issuer {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .cert-item-icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            color: var(--text-muted);
+            transition: color 150ms ease;
+        }
+
+        .cert-item:hover .cert-item-icon {
+            color: var(--text);
+        }
+
         /* ─── CODE SNIPPET ─── */
 
         .code-snippet {
@@ -1067,6 +1160,7 @@
                 <a href="#about">About</a>
                 <a href="#work">Work</a>
                 <a href="#skills">Skills</a>
+                <a href="#certificates">Certificates</a>
                 <a href="#contact">Contact</a>
             </nav>
 
@@ -1423,6 +1517,137 @@
                 </div>
             </section>
 
+            <!-- Certificates -->
+            <section class="section fade-up" id="certificates">
+                <div class="section-label">Certificates</div>
+                <h2 class="section-title">Credentials</h2>
+                <div class="certs-groups">
+
+                    <!-- Networking -->
+                    <div class="cert-group">
+                        <div class="cert-group-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                            Networking
+                        </div>
+                        <div class="cert-list">
+                            <a href="https://drive.google.com/file/d/1pgSZL1KHjCiYSTkQENjoYMmUVqkWCX2b/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Setting Up Computer Networks</span>
+                                    <span class="cert-item-issuer">Certificate of Completion</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity &amp; Compliance -->
+                    <div class="cert-group">
+                        <div class="cert-group-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Cybersecurity &amp; Compliance
+                        </div>
+                        <div class="cert-list">
+                            <a href="https://drive.google.com/file/d/15VXmpMtlyOpMVQa7a7TnbGbi4mEq9G_C/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Fortinet Certified Associate in Cybersecurity</span>
+                                    <span class="cert-item-issuer">Fortinet</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/17UG4r0yW9-ksZDcEPNR9IG1kJ3xLzEHr/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Fortinet Certified Fundamentals in Cybersecurity</span>
+                                    <span class="cert-item-issuer">Fortinet</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1g3l1MtLDnkyg8M7Z6hih4gI_HVc5IKVQ/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">ISO/IEC 27001:2022 Information Security Associate</span>
+                                    <span class="cert-item-issuer">Skillfront</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics -->
+                    <div class="cert-group">
+                        <div class="cert-group-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                            Data Analytics
+                        </div>
+                        <div class="cert-list">
+                            <a href="https://drive.google.com/file/d/1l7d7IT8HCOxfi_2XYGyAn9HzkxjXadDZ/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Data, Data, Everywhere</span>
+                                    <span class="cert-item-issuer">Google &middot; Coursera</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1QcUEv7PrR024HzN1WL8Jvrp3_HL7dlqE/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Ask Questions to Make Data-Driven Decisions</span>
+                                    <span class="cert-item-issuer">Google &middot; Coursera</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1f69XglklA_8YD99EqGjJjnNLO498AsjW/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Prepare Data for Exploration</span>
+                                    <span class="cert-item-issuer">Google &middot; Coursera</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/19mP3-TCXsjAt-yb_iB24SMGAkGDjsFZ9/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Process Data from Dirty to Clean</span>
+                                    <span class="cert-item-issuer">Google &middot; Coursera</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1ydWRea_FlQTPNENOET_pPK3sQxCXe8sO/view?usp=sharing" class="cert-item" target="_blank" rel="noopener">
+                                <span class="cert-item-main">
+                                    <span class="cert-item-name">Analyze Data to Answer Questions</span>
+                                    <span class="cert-item-issuer">Google &middot; Coursera</span>
+                                </span>
+                                <svg class="cert-item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             <!-- GitHub / Open Source -->
             <section class="section fade-up">
                 <div class="section-label">Code</div>
@@ -1689,7 +1914,7 @@
         });
 
         // ─── SCROLL SPY (active nav highlight) ───
-        const navSections = document.querySelectorAll('#about, #work, #skills, #contact');
+        const navSections = document.querySelectorAll('#about, #work, #skills, #certificates, #contact');
         const navLinks = document.querySelectorAll('.panel-nav a');
 
         const spyObserver = new IntersectionObserver((entries) => {
